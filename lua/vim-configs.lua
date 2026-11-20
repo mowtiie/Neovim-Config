@@ -42,6 +42,8 @@ vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 -- Show search results live in a split window as you type the pattern
 vim.o.inccommand = 'split'
+-- Always show the sign column so diagnostics don't shift the text
+vim.o.signcolumn = 'yes'
 -- Highlight the current line the cursor is on
 vim.o.cursorline = true
 -- Keep 10 lines of context above and below the cursor when scrolling

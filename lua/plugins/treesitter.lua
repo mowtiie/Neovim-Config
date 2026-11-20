@@ -8,7 +8,7 @@ return {
     config.setup({
         ensure_installed = {
             "lua", "python", "javascript", "css", "html", "markdown",
-            "vim", "vimdoc", "java", "c_sharp"
+            "vim", "vimdoc", "java"
         },
         highlight = { enable = true },
         indent = { enable = true }
