@@ -24,13 +24,13 @@ My personal Neovim setup, written in Lua and managed with [lazy.nvim](https://gi
 - A C compiler (builds the treesitter parsers)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (powers live grep)
 - [Node.js](https://nodejs.org) (needed by the Python, JavaScript, HTML and CSS language servers)
-- A JDK, version 21 or later (needed by the Java language server)
+- JDK 25 (needed to run the Java language server; your projects can use any JDK)
 
 Install them with your package manager:
 
 - **Windows** (PowerShell, using [winget](https://learn.microsoft.com/windows/package-manager/winget/)):
   ```powershell
-  winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC BrechtSanders.WinLibs.POSIX.UCRT OpenJS.NodeJS.LTS EclipseAdoptium.Temurin.21.JDK
+  winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC BrechtSanders.WinLibs.POSIX.UCRT OpenJS.NodeJS.LTS EclipseAdoptium.Temurin.25.JDK
   ```
 - **macOS** ([Homebrew](https://brew.sh)):
   ```bash

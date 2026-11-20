@@ -20,6 +20,13 @@ return {
             },
         })
 
+        -- jdtls needs JDK 25 to run. If one is installed in the usual Windows
+        -- location, use it for jdtls only; your projects can keep their own JDK.
+        local jdk25 = vim.fn.glob("C:/Program Files/Eclipse Adoptium/jdk-25*", false, true)[1]
+        if jdk25 then
+            vim.lsp.config("jdtls", { cmd_env = { JAVA_HOME = jdk25 } })
+        end
+
         -- Installs these servers via Mason and enables them automatically
         require("mason-lspconfig").setup({
             ensure_installed = {
