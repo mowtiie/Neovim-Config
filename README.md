@@ -14,9 +14,33 @@ My personal Neovim setup, written in Lua and managed with [lazy.nvim](https://gi
 - **Fuzzy finder:** telescope (`Ctrl+p` for files, `<Space>fg` for live grep)
 - **Start screen:** alpha-nvim
 
-## Installation
+## Requirements
 
-**Requirements:** Neovim 0.10 or later, Git, a C compiler (for treesitter parsers), and [ripgrep](https://github.com/BurntSushi/ripgrep) (for live grep).
+- [Neovim](https://neovim.io) 0.10 or later
+- [Git](https://git-scm.com)
+- A C compiler (builds the treesitter parsers)
+- [ripgrep](https://github.com/BurntSushi/ripgrep) (powers live grep)
+
+Install them with your package manager:
+
+- **Windows** (PowerShell, using [winget](https://learn.microsoft.com/windows/package-manager/winget/)):
+  ```powershell
+  winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC BrechtSanders.WinLibs.POSIX.UCRT
+  ```
+- **macOS** ([Homebrew](https://brew.sh)):
+  ```bash
+  xcode-select --install
+  brew install neovim git ripgrep
+  ```
+- **Debian/Ubuntu**:
+  ```bash
+  sudo apt install neovim git ripgrep build-essential
+  ```
+  The `apt` version of Neovim can be older than 0.10. Check with `nvim --version`, and if it's too old, install a newer release from the [Neovim releases page](https://github.com/neovim/neovim/releases).
+
+Restart your terminal afterwards so the new commands are on your PATH.
+
+## Installation
 
 1. Back up any existing config (optional).
 
