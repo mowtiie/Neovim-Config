@@ -14,7 +14,8 @@ My personal Neovim setup, written in Lua and managed with [lazy.nvim](https://gi
 - **Fuzzy finder:** telescope (`Ctrl+p` for files, `<Space>fg` for live grep)
 - **Start screen:** alpha-nvim
 - **Language servers:** nvim-lspconfig with mason.nvim, which installs servers for Lua, Python, JavaScript, HTML, CSS and Java (`gd` definition, `K` hover, `<Space>rn` rename, `<Space>ca` code action)
-- **Completion:** blink.cmp (`Ctrl+Space` open, `Ctrl+n`/`Ctrl+p` select, `Ctrl+y` accept)
+- **Completion:** blink.cmp (`Ctrl+Space` open, `Ctrl+n`/`Ctrl+p` select, `Enter` accept)
+- **Auto pairs:** nvim-autopairs closes `(`, `{`, `[` and quotes for you
 
 ## Requirements
 
