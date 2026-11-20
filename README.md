@@ -13,30 +13,34 @@ My personal Neovim setup, written in Lua and managed with [lazy.nvim](https://gi
 - **Syntax highlighting:** nvim-treesitter
 - **Fuzzy finder:** telescope (`Ctrl+p` for files, `<Space>fg` for live grep)
 - **Start screen:** alpha-nvim
+- **Language servers:** nvim-lspconfig with mason.nvim, which installs servers for Lua, Python, JavaScript, HTML, CSS and Java (`gd` definition, `K` hover, `<Space>rn` rename, `<Space>ca` code action)
+- **Completion:** blink.cmp (`Ctrl+Space` open, `Ctrl+n`/`Ctrl+p` select, `Ctrl+y` accept)
 
 ## Requirements
 
-- [Neovim](https://neovim.io) 0.10 or later
+- [Neovim](https://neovim.io) 0.11 or later
 - [Git](https://git-scm.com)
 - A C compiler (builds the treesitter parsers)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (powers live grep)
+- [Node.js](https://nodejs.org) (needed by the Python, JavaScript, HTML and CSS language servers)
+- A JDK, version 21 or later (needed by the Java language server)
 
 Install them with your package manager:
 
 - **Windows** (PowerShell, using [winget](https://learn.microsoft.com/windows/package-manager/winget/)):
   ```powershell
-  winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC BrechtSanders.WinLibs.POSIX.UCRT
+  winget install Neovim.Neovim Git.Git BurntSushi.ripgrep.MSVC BrechtSanders.WinLibs.POSIX.UCRT OpenJS.NodeJS.LTS EclipseAdoptium.Temurin.21.JDK
   ```
 - **macOS** ([Homebrew](https://brew.sh)):
   ```bash
   xcode-select --install
-  brew install neovim git ripgrep
+  brew install neovim git ripgrep node openjdk
   ```
 - **Debian/Ubuntu**:
   ```bash
-  sudo apt install neovim git ripgrep build-essential
+  sudo apt install neovim git ripgrep build-essential nodejs npm default-jdk
   ```
-  The `apt` version of Neovim can be older than 0.10. Check with `nvim --version`, and if it's too old, install a newer release from the [Neovim releases page](https://github.com/neovim/neovim/releases).
+  The `apt` version of Neovim can be older than 0.11. Check with `nvim --version`, and if it's too old, install a newer release from the [Neovim releases page](https://github.com/neovim/neovim/releases).
 
 Restart your terminal afterwards so the new commands are on your PATH.
 
