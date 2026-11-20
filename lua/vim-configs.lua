@@ -1,7 +1,7 @@
 -- Setting the leader key for user-defined mappings
 vim.g.mapleader = ' '
 -- Setting the local leader key (for mappings specific to a buffer or window)
-vim.g.mallocalleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Display the absolute line number on the left
 vim.o.number = true           
@@ -36,10 +36,6 @@ vim.o.softtabstop = 4
 vim.o.breakindent = true
 -- Enable persistent undo (undo history is saved across sessions)
 vim.o.undofile = true
--- You have ignorecase set twice, but it's okay. Ignoring case when searching.
-vim.o.ignorecase = true
--- You have smartcase set twice, but it's okay. Search becomes case-sensitive if uppercase is used.
-vim.o.smartcase = true
 -- Time in milliseconds to wait for swap file updates (controls autowrite and other events)
 vim.o.updatetime = 250
 -- Time in milliseconds to wait for a mapped key sequence to complete (affects leader key responsiveness)

@@ -49,11 +49,12 @@ Neovim's configuration directory depends on your operating system:
 
     * **Linux/macOS:**
         ```bash
-        git clone https://github.com/eipna/Neovim-Config ~/.config/nvim
+        git clone https://github.com/mowtiie/Neovim-Config ~/.config/nvim
         ```
     * **Windows (PowerShell/CMD):**
         ```bash
-        git clone https://github.com/eipna/Neovim-Config $env:LOCALAPPDATA\nvim
+        git clone https://github.com/mowtiie/Neovim-Config $env:LOCALAPPDATA\nvim
+        ```
 
 3.  **Launch Neovim:**
     ```bash
@@ -67,8 +68,7 @@ Neovim's configuration directory depends on your operating system:
 
 All configuration files are written in **Lua**.
 
-The structure mirrors your setup:
+Layout:
 * `init.lua`: The main entry point for Neovim.
 * `lua/vim-configs.lua`: Contains all **core Vim options** and **global settings**.
-* `lua/plugins.lua`: Defines which plugins **Lazy** should install.
-* `lua/plugins/`: Contains individual configuration files (e.g., `alpha.lua`, `telescope.lua`) that configure the corresponding plugin.
+* `lua/plugins/`: One file per plugin (e.g., `alpha.lua`, `telescope.lua`); **Lazy** loads every spec in this directory.
