@@ -27,6 +27,16 @@ return {
             vim.lsp.config("jdtls", { cmd_env = { JAVA_HOME = jdk25 } })
         end
 
+        -- Also treat IntelliJ projects (.idea) as Java projects, even without
+        -- Maven, Gradle or Git. Earlier groups take priority over later ones.
+        vim.lsp.config("jdtls", {
+            root_markers = {
+                { "mvnw", "gradlew", "settings.gradle", "settings.gradle.kts", ".git" },
+                { "build.xml", "pom.xml", "build.gradle", "build.gradle.kts" },
+                { ".idea" },
+            },
+        })
+
         -- Installs these servers via Mason and enables them automatically
         require("mason-lspconfig").setup({
             ensure_installed = {
